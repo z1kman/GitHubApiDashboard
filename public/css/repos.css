@@ -1,0 +1,82 @@
+p{
+    display: inline;
+}
+.HeaderProfile{
+    width: 65%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+.ImgProfile{
+    margin-top: 10px;
+}
+.RepositoryInfo{
+    display: flex;
+    font-size: x-large;
+    margin-left: 10px;
+    flex-direction: column; 
+}
+
+.Language{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;  
+
+}
+.LiLanguage{
+    display: inline-block;
+}
+.NameProfile{
+    height: 100%;
+}
+.Description{
+    font-size: x-large;
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    text-align: center;
+}
+#Description{
+    font-size: large;
+}
+.Contributors{
+    font-size: x-large;
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    text-align: center;
+}
+#Contributors{
+    margin: 0px;
+    padding: 0px; 
+    list-style-type: none; 
+}
+.LiContributors{
+    list-style-type: none;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width:900px){
+    header{
+        justify-content: center;
+    }
+    .HeaderProfile, .Description, .Contributors {
+        width: 90%;
+    }
+}
+@media (max-width:700px){
+    .HeaderProfile, .Description, .Contributors{
+        width: 700px;
+    }
+
+}

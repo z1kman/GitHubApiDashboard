@@ -1,0 +1,134 @@
+
+.SearchPanel{
+    position: absolute;
+    justify-content: center;
+    font-size: large;
+    color: white;
+    width: 100%;
+
+}
+.SearchInput{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(82, 82, 82);
+    color: rgb(136, 136, 136);
+    text-align: center;
+    width:40%;
+    transition: 0.2s;
+}
+.SearchInput:focus{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: 0.2s;
+    width:50%;
+    text-align: left;
+}
+.LabelContainer{
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ReposList{
+    display: flex;
+    flex-direction: column;
+    min-height: 80%;
+    padding: 0;
+}
+.Repos{
+    border-bottom: 1px solid rgb(206, 206, 206);
+    width: 60%;
+    margin-top: 10px;
+    font-size: larger;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.LeftSide{
+    display: inline-block;
+}
+.RightSide{
+    float: right;
+    text-align: right;
+
+}
+.NameRepos{
+    margin-left: 10px;
+    color: rgb(0, 141, 206);
+    cursor: pointer;
+}
+.NameRepos:hover{
+    color: rgb(0, 92, 134);
+}
+
+.DataUpdate{
+    margin-top: 10px;
+    color: rgb(88, 88, 88);
+}
+.CountStars{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.Paginator{
+    display: flex;
+    justify-content: center;
+}
+.NumberOfPage{
+    display: inline-block;
+    background-color: rgb(206, 206, 206);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 60px;
+    transition: 0.3s;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    outline: none;
+}
+.ActivePage{
+    background-color: rgb(59, 177, 255);
+}
+.NumberOfPage:hover{
+    background-color: rgb(59, 177, 255);
+    transition: 0.3s;
+}
+
+@media (max-width:900px){
+    .LabelHeader{
+        display: none;
+    }
+    .SearchInput{
+        width: 80%;
+        height: 50px;
+    }
+    .SearchInput:focus{
+        width: 90%;
+    }
+    .Repos{
+        width: 100%;
+        transition: 0.5s;
+    }
+    .LeftSide{
+       display: block; 
+       width: 100%;
+       text-align: center;
+    }
+    .RightSide{
+        display: block; 
+        width: 100%;
+        text-align: center;
+    }
+
+}
+@media (orientation: portrait){
+    .ReposList{
+        min-height: 100%;
+    }
+}

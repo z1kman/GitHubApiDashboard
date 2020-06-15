@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Github Dashboard</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/general_style.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="LabelHeader">Github Dashboard</div>
+        <div class="SearchPanel">
+            <input type="text" class="SearchInput" id="SearchInput" title="Введите название репозитория"
+                placeholder="Введите название репозитория" oninput="Start(); NumberOfPage = 1;">
+        </div>
+    </header>
+    <div class="Container" hidden="hidden">
+        <h2 class="LabelContainer" id="LabelContainer">Список репозиториев</h2>
+        <ul class="ReposList" id="ReposList">
+        </ul>
+        <div class="Paginator" id="Paginator">
+            <input type="button" class="NumberOfPage ActivePage" value="1" onclick="GoToPage(this)">
+        </div>
+    </div>
+</body>
+
+</html>
