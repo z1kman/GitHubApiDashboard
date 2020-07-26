@@ -57,14 +57,18 @@ function RepositoryCardGeneration(Link) {//создание карточки р�
                     if (i + 1 < Object.keys(result).length)//если не последний элемент
                         Language.innerHTML += `<li class='LiLanguage'>${Object.keys(result)[i]},</li>`;
                     else
-                        Language.innerHTML += `<li class='LiLanguage>${Object.keys(result)[i]}</li>`;
+                        Language.innerHTML += `<li class='LiLanguage'> ${Object.keys(result)[i]}</li>`;
                 }
             })
             //поиск и создание списка контрибьютеров
             fetch(`${Link}/contributors?per_page=10&${AuthKey}`).then(response => response.ok ? response.json() : response.text()).then(result => {
                 Contributors.innerHTML = "Топ самых активных контрибьютеров";
                 for (let i = 0; i < result.length; i++) {
-                    Contributors.innerHTML += `<li class = 'LiContributors'>${result[i].login}<li>`;
+                    if (i + 1 < result.length) {
+                        Contributors.innerHTML += `<li class = 'LiContributors'>${result[i].login}<li>`;
+                    } else {
+                        Contributors.innerHTML += `<li class = 'LiContributors Last'>${result[i].login}<li>`;
+                    }
                 }
             })
             //если репозиторий пустой

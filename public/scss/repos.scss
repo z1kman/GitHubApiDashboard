@@ -1,0 +1,100 @@
+@import 'variables';
+p{
+    display: inline;
+}
+.HeaderProfile{
+    width: 65%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 15px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    background-color: $colorBgProfile;
+}
+.ImgProfile{
+    margin-top: 10px;
+    background-color: $colorBgProfile;
+}
+.RepositoryInfo{
+    display: flex;
+    font-size: x-large;
+    margin-left: 10px;
+    flex-direction: column; 
+}
+
+.Language{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;  
+
+}
+.LiLanguage{
+    display: inline-block;
+}
+.NameProfile{
+    height: 100%;
+}
+.Description{
+    font-size: 1.6em;
+    width: 65%;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    border-radius : 10px;
+    background-color: $colorBgProfile;
+    text-align: center;
+}
+#Description{
+    font-size: large;
+}
+.Contributors{
+    background-color: $colorBgProfile;
+    margin-top:  10px;
+    border-radius: 10px;
+    font-size: x-large;
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    text-align: center;
+}
+#Contributors{
+    margin: 0px;
+    padding: 0px; 
+    list-style-type: none; 
+}
+@mixin LiContributors {
+    list-style-type: none;
+    padding: 4px;
+    margin-top: 5px;
+    color: rgb(68, 68, 68);
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;   
+}
+.LiContributors:not(.Last){
+    @include LiContributors;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+.Last{
+    @include LiContributors;
+}
+@media (max-width:900px){
+    header{
+        justify-content: center;
+    }
+    .HeaderProfile, .Description, .Contributors {
+        width: 90%;
+    }
+}
+@media (max-width:700px){
+    .HeaderProfile, .Description, .Contributors{
+        width: 700px;
+    }
+
+}

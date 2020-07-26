@@ -1,0 +1,142 @@
+@import "variables";
+
+.SearchPanel{
+    position: absolute;
+    justify-content: center;
+    font-size: large;
+    width: 100%;
+}
+.SearchInput{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: none;
+    background-color: $colorBgSearchInput;
+    color: $colorSearchInput;
+    text-align: center;
+    width:40%;
+    transition: 0.2s;
+    &:focus{
+        background-color: $colorBgFocusSearchInput;
+        color: $colorFocusSearchInput;
+        transition: 0.2s;
+        width:50%;
+        text-align: left;
+    }
+}
+.LabelContainer{
+    color : $colorLabelContainer;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ReposList{
+    display: flex;
+    flex-direction: column;
+    min-height: 80%;
+    padding: 0;
+}
+.Repos{
+    font-size: 1.3em;
+    width: 60%;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color : white;
+    border-radius: 10px;
+    padding : 15px;
+}
+.LeftSide{
+    display: inline-block;
+}
+.RightSide{
+    float: right;
+    text-align: right;
+
+}
+.NameRepos{
+    margin-left: 10px;
+    color: $colorLinkFocus;
+    cursor: pointer;
+    &:hover {
+        color: $colorLinkHover;  
+    }
+}
+
+
+.DataUpdate{
+    margin-top: 10px;
+    color: $colorDarkGray;
+}
+.CountStars{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.Paginator{
+    display: flex;
+    justify-content: center;
+}
+.NumberOfPage{
+    display: inline-block;
+    background-color: $colorBgNumberOfPage;
+    color: $colorNumberOfPage;
+    text-align: center;
+    padding: 10px;
+    width: 60px;
+    transition: 0.3s;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    outline: none;
+    font-size: 1.3em;
+    &:hover {
+        background-color: $colorBgActiveNumberPage;
+        color : $colorActiveNumberPage;
+        transition: 0.3s;
+    }
+}
+.ActivePage{
+    background-color: $colorBgActiveNumberPage;
+    color : $colorActiveNumberPage
+}
+
+@media (max-width:900px){
+    .LabelHeader{
+        display: none;
+    }
+    .SearchInput{
+        width: 80%;
+        height: 50px;
+        &:focus{
+            width: 90%;  
+        }
+    }
+    .Repos{
+        width: 100%;
+        transition: 0.5s;
+    }
+    .LeftSide{
+       display: block; 
+       width: 100%;
+       text-align: center;
+    }
+    .RightSide{
+        display: block; 
+        width: 100%;
+        text-align: center;
+    }
+
+}
+@media (orientation: portrait){
+    .ReposList{
+        min-height: 100%;
+    }
+}
