@@ -12,6 +12,7 @@ p{
     padding-bottom: 25px;
     border-radius: 10px;
     background-color: $colorBgProfile;
+    box-shadow: $colorShandows;
 }
 .ImgProfile{
     margin-top: 10px;
@@ -47,6 +48,7 @@ p{
     border-radius : 10px;
     background-color: $colorBgProfile;
     text-align: center;
+    box-shadow: $colorShandows;
 }
 #Description{
     font-size: large;
@@ -62,11 +64,13 @@ p{
     margin-right: auto;
     padding: 15px;
     text-align: center;
+    box-shadow: $colorShandows;
 }
 #Contributors{
     margin: 0px;
     padding: 0px; 
     list-style-type: none; 
+    
 }
 @mixin LiContributors {
     list-style-type: none;

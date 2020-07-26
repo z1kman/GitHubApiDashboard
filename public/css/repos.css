@@ -12,6 +12,7 @@ p {
   padding-bottom: 25px;
   border-radius: 10px;
   background-color: white;
+  box-shadow: 0 0 15px rgba(180, 180, 180, 0.5);
 }
 
 .ImgProfile {
@@ -51,6 +52,7 @@ p {
   border-radius: 10px;
   background-color: white;
   text-align: center;
+  box-shadow: 0 0 15px rgba(180, 180, 180, 0.5);
 }
 
 #Description {
@@ -68,6 +70,7 @@ p {
   margin-right: auto;
   padding: 15px;
   text-align: center;
+  box-shadow: 0 0 15px rgba(180, 180, 180, 0.5);
 }
 
 #Contributors {
