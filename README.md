@@ -1,4 +1,4 @@
-# GitHubApiDashboard
+# Git Hub Api Dashboard
 
 ## Описание:
 Dashboard GitHub разработанный с помошью API GitHub. 
